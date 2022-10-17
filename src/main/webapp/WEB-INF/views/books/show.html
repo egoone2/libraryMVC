@@ -21,7 +21,7 @@
     <label for="person">Choose new reader: </label>
     <select th:object="${person}" th:field="*{id}" id="person">
         <option th:each="person : ${people}" th:value="${person.getId()}"
-                th:text="${person.getName()}">id</option>
+                th:text="${person.getName()}">name</option>
     </select>
         <input type="submit" value="Submit"/>
     </form>

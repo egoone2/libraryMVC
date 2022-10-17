@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.41">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1921</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1976</IntrospectionStateNumber>
       <ServerVersion>14.5</ServerVersion>
       <StartupTime>1665700280</StartupTime>
       <TimeZones>true ACDT
@@ -805,7 +805,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>1921</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1976</IntrospectionStateNumber>
       <ObjectId>32773</ObjectId>
       <Relations>sequence|table|32774|32775|1
 sequence|table|32811|32812|1
@@ -4234,7 +4234,7 @@ sequence|table|32811|32812|1
     <schema id="263" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1921</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1976</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4253,7 +4253,7 @@ sequence|table|32811|32812|1
     </sequence>
     <table id="266" parent="263" name="book">
       <ObjectId>32812</ObjectId>
-      <StateNumber>1920</StateNumber>
+      <StateNumber>1975</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4291,17 +4291,18 @@ sequence|table|32811|32812|1
     </column>
     <column id="272" parent="266" name="person_id">
       <DataType>integer|0s</DataType>
-      <Position>5</Position>
-      <StateNumber>1920</StateNumber>
+      <Position>6</Position>
+      <StateNumber>1975</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="273" parent="266" name="book_person_id_fkey">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>32817</ObjectId>
+      <ObjectId>32822</ObjectId>
+      <OnDelete>set-null</OnDelete>
       <RefColNames>person_id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>1920</StateNumber>
+      <StateNumber>1975</StateNumber>
       <RefTableId>32775</RefTableId>
       <RefTableName>person</RefTableName>
       <RefTableKind>table</RefTableKind>

@@ -8,11 +8,13 @@
 <h1>Book list</h1>
 
 <div th:each="book : ${books}">
-  <p th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}">valya</p>
+  <a th:href="@{/books/{id}(id=${book.getId()})}"
+     th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}">valya</a>
 </div>
 
 <hr/>
 <a href="books/new">Add book</a>
+<a href="/people"> People list</a>
 <hr/>
 </body>
 </html>
