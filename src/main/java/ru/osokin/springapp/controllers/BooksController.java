@@ -11,6 +11,7 @@ import ru.osokin.springapp.models.Book;
 import ru.osokin.springapp.models.Person;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/books")
@@ -31,11 +32,15 @@ public class BooksController {
 
     @GetMapping("/{id}")
     public String show(@PathVariable("id") int id, Model model) {
-        Book book = bookDAO.show(id);
-        Person person = bookDAO.getOwner(id).orElse(null);
-        model.addAttribute("book", book);
-        model.addAttribute("person", person);
-        model.addAttribute("people", personDAO.index());
+        model.addAttribute("book", bookDAO.show(id));
+
+        Optional<Person> bookOwner = bookDAO.getOwner(id);
+
+        if (bookOwner.isPresent())
+            model.addAttribute("owner", bookOwner.get());
+        else
+            model.addAttribute("people", personDAO.index());
+
         return "books/show";
     }
 
@@ -45,7 +50,7 @@ public class BooksController {
         return "redirect:/books/{id}";
     }
 
-    @PatchMapping("/{id}/addOwner")
+    @PatchMapping("/{id}/assign")
     public String assign(@PathVariable("id") int id, Person person) {
         bookDAO.addOwner(id, person);
         return "redirect:books/{id}";

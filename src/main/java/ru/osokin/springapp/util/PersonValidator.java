@@ -24,4 +24,3 @@ public class PersonValidator implements Validator {
 
     }
 }
-//TODO прописать валидацию!

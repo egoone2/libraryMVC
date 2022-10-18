@@ -8,7 +8,10 @@
 <h2 style="color: coral">Person</h2>
 <p th:text="${person.getName()} + ', ' + ${person.getBirthYear()}">VALUE</p>
 <hr/>
-<div th:each="book : ${books}">
+<div th:if="${books.size() == 0}">
+    <p>This person does not have any books</p>
+</div>
+<div th:if="${books.size() != 0}" th:each="book : ${books}">
     <p th:text="${book.getTitle()} + ', ' + ${book.getYear()}">book</p>
 </div>
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
