@@ -10,11 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61fc0665-9aec-4a8f-85d5-4f3e2f1c659d" name="Changes" comment="Second day, added some BooksController methods">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21fa1984-d040-4290-88b7-67a41d7536e9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21fa1984-d040-4290-88b7-67a41d7536e9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21fa1984-d040-4290-88b7-67a41d7536e9/storage_v2/_src_/database/libraryDB.eepxMA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21fa1984-d040-4290-88b7-67a41d7536e9/storage_v2/_src_/database/libraryDB.eepxMA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/config/MySpringMVCDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/config/MySpringMVCDispatcherServletInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/dao/BookDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/dao/PersonDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/rowMappers/BookRowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/rowMappers/PersonRowMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/osokin/springapp/util/PersonValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
@@ -26,14 +40,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-14.0.2/lib/src.zip!/java.base/java/util/concurrent/TimeUnit.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -53,38 +71,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/whale/IdeaProjects/SpringMVCApp&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;732ad3d809d8900d5adbbc52d3de3720&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/whale/IdeaProjects/librarybootapp",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "732ad3d809d8900d5adbbc52d3de3720"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LibraryMVCApp:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/LibraryMVCApp_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="0f97a699-0142-4163-8650-964fa700dd82" />
+        <option name="BASE_DIRECTORY_NAME" value="8bc01e93-c908-4c0f-9470-cb31976ae344" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -92,7 +111,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51687" />
+        <option name="DEBUG_PORT" value="50221" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -174,7 +193,25 @@
       <workItem from="1665716587873" duration="20857000" />
       <workItem from="1665916766937" duration="14797000" />
       <workItem from="1666079771220" duration="188000" />
-      <workItem from="1666103697997" duration="4467000" />
+      <workItem from="1666103697997" duration="5294000" />
+      <workItem from="1666761458827" duration="236000" />
+      <workItem from="1666767947633" duration="815000" />
+      <workItem from="1666783488160" duration="916000" />
+      <workItem from="1666841505703" duration="2589000" />
+      <workItem from="1666844651904" duration="124000" />
+      <workItem from="1667313549956" duration="3549000" />
+      <workItem from="1667478819102" duration="3227000" />
+      <workItem from="1667719271307" duration="296000" />
+      <workItem from="1667719603874" duration="4975000" />
+      <workItem from="1667825073868" duration="113000" />
+      <workItem from="1667890816429" duration="9320000" />
+      <workItem from="1667970373288" duration="750000" />
+      <workItem from="1668169889986" duration="9655000" />
+      <workItem from="1668326841899" duration="6846000" />
+      <workItem from="1668512758071" duration="558000" />
+      <workItem from="1668526512940" duration="897000" />
+      <workItem from="1668858676591" duration="556000" />
+      <workItem from="1669198094220" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="First commit Library MVC App">
       <created>1665917363678</created>

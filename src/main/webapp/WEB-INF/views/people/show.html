@@ -9,10 +9,11 @@
 <p th:text="${person.getName()} + ', ' + ${person.getBirthYear()}">VALUE</p>
 <hr/>
 <div th:if="${books.size() == 0}">
-    <p>This person does not have any books</p>
+    <p>У этого посетителя еще нет книг</p>
 </div>
 <div th:if="${books.size() != 0}" th:each="book : ${books}">
-    <p th:text="${book.getTitle()} + ', ' + ${book.getYear()}">book</p>
+    <p th:style ="${book.isOverdue()} ? 'color: red'"
+       th:text="${book.getTitle()} + ', ' + ${book.getYear()}">book</p>
 </div>
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
     <input type="submit" value="Edit"/>
@@ -24,3 +25,4 @@
 
 </body>
 </html>
+

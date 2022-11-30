@@ -17,11 +17,11 @@
 </div>
 
 <div th:if="${people}">
-    <span>Эта книга свободна. Кому назначить ее?</span>
+    <span>Эта книга свободна. Кому ее назначить?</span>
     <form th:method="PATCH" th:action="@{/books/{id}/assign(id=${book.getId()})}">
         <label for="person">Выберите человека</label>
         <select th:object="${person}" th:field="*{id}" id="person">
-            <option th:each="person : ${people}" th:value="${person.getId()}" th:text="${person.getName()}">
+            <option th:each="person : ${people}" th:value="${person.getId()}" th:text="${person.getName()}">лотлот
             </option>
         </select>
         <input type="submit" value="Назначить книгу"/>
@@ -29,11 +29,11 @@
 </div>
 
 <form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">
-    <input type="submit" value="Edit"/>
+    <input type="submit" value="Изменить"/>
 </form>
 <br/>
 <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
-    <input type="submit" value="Delete"/>
+    <input type="submit" value="Удалить"/>
 </form>
 </body>
 </html>

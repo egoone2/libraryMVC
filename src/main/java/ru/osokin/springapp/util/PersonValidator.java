@@ -4,14 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import ru.osokin.springapp.dao.PersonDAO;
 import ru.osokin.springapp.models.Person;
+import ru.osokin.springapp.repositories.PeopleRepository;
+
 @Component
 public class PersonValidator implements Validator {
-    private final PersonDAO personDAO;
+    private final PeopleRepository peopleRepository;
     @Autowired
-    public PersonValidator(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    public PersonValidator(PeopleRepository peopleRepository) {
+        this.peopleRepository = peopleRepository;
     }
 
     @Override
@@ -21,6 +22,7 @@ public class PersonValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
+        Person person = (Person) target;
 
     }
 }
